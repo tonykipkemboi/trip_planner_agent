@@ -125,16 +125,10 @@ def update_status(status_container, message):
 
 if submitted:
     with st.status("**Grab a coffee or go for a ~10 minute walk, processing your trip plan...**", expanded=True) as status:
-      start_time = datetime.datetime.now() 
-
       trip_crew = TripCrew(location, cities, date_range, interests)
       result = trip_crew.run(update_callback=lambda msg: update_status(status, msg))
-
-      end_time = datetime.datetime.now()  
-      time_taken = end_time - start_time
-
       # Update the status container to indicate completion and time taken
-      status.update(f"✅ Trip Plan Ready! Time taken: {time_taken}", state="complete", expanded=False)
+      status.update("✅ Trip Plan Ready!", state="complete", expanded=False)
   
     st.subheader("Here is your Trip Plan", anchor=False, divider="rainbow")
     st.markdown(result)
