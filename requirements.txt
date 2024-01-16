@@ -1,0 +1,6 @@
+crewai
+streamlit 
+openai
+unstructured==0.10.25
+pyowm==3.3.0
+tools==0.1.9
