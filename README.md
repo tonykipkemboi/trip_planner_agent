@@ -16,7 +16,7 @@ CrewAI simplifies the orchestration of role-playing AI agents. In VacAIgent, the
 
 ## Streamlit Interface
 
-The introduction of Streamlit transforms this application into an interactive web app, allowing users to easily input their preferences and receive tailored travel plans.
+The introduction of [Streamlit](https://streamlit.io/) transforms this application into an interactive web app, allowing users to easily input their preferences and receive tailored travel plans.
 
 ## Running the Application
 
