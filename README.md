@@ -6,6 +6,8 @@ _Forked and enhanced from the_ [_crewAI examples repository_](https://github.com
 
 ![Sped up GIF](images/demo.gif)
 
+![Screenshot](images/agent_steps.png)
+
 ## Introduction
 
 VacAIgent leverages the CrewAI framework to automate and enhance the trip planning experience, integrating a user-friendly Streamlit interface. This project demonstrates how autonomous AI agents can collaborate and execute complex tasks efficiently, now with an added layer of interactivity and accessibility through Streamlit.
