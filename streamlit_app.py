@@ -1,8 +1,9 @@
 from crewai import Crew
-from trip_agents import TripAgents
+from trip_agents import TripAgents, StreamToExpander
 from trip_tasks import TripTasks
 import streamlit as st
 import datetime
+import sys
 
 st.set_page_config(page_icon="✈️", layout="wide")
 
@@ -102,8 +103,8 @@ if __name__ == "__main__":
 
         # Credits to joaomdmoura/CrewAI for the code: https://github.com/joaomdmoura/crewAI
         st.sidebar.markdown(
-            """
-        Credits to [**@joaomdmoura**](https://twitter.com/joaomdmoura) 
+        """
+        Credits to [**@joaomdmoura**](https://twitter.com/joaomdmoura)
         for creating **crewAI** 🚀
         """,
             unsafe_allow_html=True
@@ -123,6 +124,7 @@ if __name__ == "__main__":
 if submitted:
     with st.status("🤖 **Agents at work...**", state="running", expanded=True) as status:
         with st.container(height=500, border=False):
+            sys.stdout = StreamToExpander(st)
             trip_crew = TripCrew(location, cities, date_range, interests)
             result = trip_crew.run()
         status.update(label="✅ Trip Plan Ready!",
