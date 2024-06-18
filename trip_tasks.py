@@ -56,8 +56,8 @@ class TripTasks():
 
     def plan_task(self, agent, origin, interests, range):
         return Task(description=dedent(f"""
-            Expand this guide into a a full 7-day travel
-            itinerary with detailed per-day plans, including
+            Expand this guide into a full travel
+            itinerary for this time {range} with detailed per-day plans, including
             weather forecasts, places to eat, packing suggestions,
             and a budget breakdown.
 
