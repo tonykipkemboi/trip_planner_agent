@@ -51,7 +51,7 @@ To switch from GPT-4 to GPT-3.5, pass the llm argument in the agent constructor:
 ```python
 from langchain.chat_models import ChatOpenAI
 
-llm = ChatOpenAI(model='gpt-3.5') # Loading GPT-3.5
+llm = ChatOpenAI(model='gpt-3.5-turbo') # Loading gpt-3.5-turbo (see more OpenAI models at https://platform.openai.com/docs/models/gpt-4-turbo-and-gpt-4)
 
 class TripAgents:
     # ... existing methods
